@@ -122,5 +122,10 @@ namespace DataBase
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void find_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

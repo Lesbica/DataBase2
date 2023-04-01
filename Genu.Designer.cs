@@ -65,9 +65,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.familyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
             this.familyTableAdapter = new DataBase.Database1DataSetTableAdapters.FamilyTableAdapter();
+            this.find = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genuBindingNavigator)).BeginInit();
@@ -398,6 +400,12 @@
             this.comboBox1.TabIndex = 17;
             this.comboBox1.ValueMember = "Id";
             // 
+            // familyBindingSource
+            // 
+            this.familyBindingSource.DataMember = "Family";
+            this.familyBindingSource.DataSource = this.database1DataSet;
+            this.familyBindingSource.PositionChanged += new System.EventHandler(this.familyBindingSource_PositionChanged);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -407,21 +415,34 @@
             this.label7.TabIndex = 32;
             this.label7.Text = "Родина";
             // 
-            // familyBindingSource
-            // 
-            this.familyBindingSource.DataMember = "Family";
-            this.familyBindingSource.DataSource = this.database1DataSet;
-            this.familyBindingSource.PositionChanged += new System.EventHandler(this.familyBindingSource_PositionChanged);
-            // 
             // familyTableAdapter
             // 
             this.familyTableAdapter.ClearBeforeFill = true;
+            // 
+            // find
+            // 
+            this.find.Location = new System.Drawing.Point(980, 12);
+            this.find.Name = "find";
+            this.find.Size = new System.Drawing.Size(75, 23);
+            this.find.TabIndex = 33;
+            this.find.Text = "Find";
+            this.find.UseVisualStyleBackColor = true;
+            this.find.Click += new System.EventHandler(this.find_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(874, 12);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 34;
             // 
             // Genu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 450);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.find);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.delete);
@@ -494,5 +515,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.BindingSource familyBindingSource;
         private Database1DataSetTableAdapters.FamilyTableAdapter familyTableAdapter;
+        private System.Windows.Forms.Button find;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

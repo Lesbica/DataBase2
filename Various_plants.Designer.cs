@@ -128,6 +128,15 @@
             this.PutComboBox = new System.Windows.Forms.ComboBox();
             this.FamilyComboBox = new System.Windows.Forms.ComboBox();
             this.PlantComboBox = new System.Windows.Forms.ComboBox();
+            this.find = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.select = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.various_plantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.various_plantsBindingNavigator)).BeginInit();
@@ -142,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.plantBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -970,11 +980,96 @@
             this.PlantComboBox.Size = new System.Drawing.Size(180, 24);
             this.PlantComboBox.TabIndex = 63;
             // 
+            // find
+            // 
+            this.find.Location = new System.Drawing.Point(1630, 37);
+            this.find.Name = "find";
+            this.find.Size = new System.Drawing.Size(75, 23);
+            this.find.TabIndex = 64;
+            this.find.Text = "FindByID";
+            this.find.UseVisualStyleBackColor = true;
+            this.find.Click += new System.EventHandler(this.find_Click);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(1630, 9);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 65;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(1731, 67);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(181, 208);
+            this.textBox10.TabIndex = 66;
+            this.textBox10.Visible = false;
+            // 
+            // select
+            // 
+            this.select.Location = new System.Drawing.Point(1711, 38);
+            this.select.Name = "select";
+            this.select.Size = new System.Drawing.Size(193, 23);
+            this.select.TabIndex = 67;
+            this.select.Text = "SelectByНомінальна назва";
+            this.select.UseVisualStyleBackColor = true;
+            this.select.Click += new System.EventHandler(this.select_Click);
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(1802, 9);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(102, 22);
+            this.textBox11.TabIndex = 68;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(1434, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(478, 209);
+            this.dataGridView1.TabIndex = 69;
+            this.dataGridView1.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Назва";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Природоохоронний статус";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
             // Various_plants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 671);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.select);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.find);
             this.Controls.Add(this.PlantComboBox);
             this.Controls.Add(this.FamilyComboBox);
             this.Controls.Add(this.PutComboBox);
@@ -1047,6 +1142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.plantBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,5 +1248,14 @@
         private System.Windows.Forms.ComboBox PutComboBox;
         private System.Windows.Forms.ComboBox FamilyComboBox;
         private System.Windows.Forms.ComboBox PlantComboBox;
+        private System.Windows.Forms.Button find;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button select;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

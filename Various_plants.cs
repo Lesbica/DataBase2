@@ -436,5 +436,39 @@ namespace DataBase
         {
 
         }
+
+        private void find_Click(object sender, EventArgs e)
+        {
+            Database1DataSet.Various_plantsRow searchRes = database1DataSet.Various_plants.FindById(Convert.ToInt32(textBox9.Text));
+            textBox10.Visible = true;
+            dataGridView1.Visible = false;
+            if (searchRes != null)
+            {
+                textBox10.Text = searchRes.Рід.ToString()+", "+ searchRes._Бі__Триномінальна_назва.ToString();            }
+            else
+            {
+                MessageBox.Show("no data!");
+            }
+
+        }
+
+        private void select_Click(object sender, EventArgs e)
+        {
+            DataRow[] searchRes = database1DataSet.Tables["Various_plants"].Select("Бі /Триномінальна назва.like '"+ textBox11.Text+"%'");
+            dataGridView1.Visible = true;
+            textBox10.Visible = false;
+            dataGridView1.Rows.Clear();
+            if (searchRes != null)
+            {
+                MessageBox.Show("no data!");
+            }
+            else
+            {
+                foreach (DataRow dr in searchRes)
+                {
+                    dataGridView1.Rows.Add(dr);
+                }
+            }
+        }
     }
 }
