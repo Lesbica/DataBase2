@@ -61,11 +61,13 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.areaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.variousplantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,17 +78,27 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.variousplantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.various_plantsTableAdapter = new DataBase.Database1DataSetTableAdapters.Various_plantsTableAdapter();
-            this.areaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.areaTableAdapter = new DataBase.Database1DataSetTableAdapters.AreaTableAdapter();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.select = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.find = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.розміри = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingNavigator)).BeginInit();
             this.catalogueBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variousplantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variousplantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -147,7 +159,7 @@
             this.catalogueBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.catalogueBindingNavigator.Name = "catalogueBindingNavigator";
             this.catalogueBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.catalogueBindingNavigator.Size = new System.Drawing.Size(1281, 27);
+            this.catalogueBindingNavigator.Size = new System.Drawing.Size(1443, 31);
             this.catalogueBindingNavigator.TabIndex = 0;
             this.catalogueBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -157,7 +169,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -260,11 +272,11 @@
             this.dataGridViewTextBoxColumn5});
             this.catalogueDataGridView.DataSource = this.catalogueBindingSource;
             this.catalogueDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.catalogueDataGridView.Location = new System.Drawing.Point(0, 319);
+            this.catalogueDataGridView.Location = new System.Drawing.Point(0, 347);
             this.catalogueDataGridView.Name = "catalogueDataGridView";
             this.catalogueDataGridView.RowHeadersWidth = 51;
             this.catalogueDataGridView.RowTemplate.Height = 24;
-            this.catalogueDataGridView.Size = new System.Drawing.Size(1281, 273);
+            this.catalogueDataGridView.Size = new System.Drawing.Size(1443, 245);
             this.catalogueDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -384,6 +396,11 @@
             this.comboBox3.TabIndex = 32;
             this.comboBox3.ValueMember = "Id";
             // 
+            // areaBindingSource
+            // 
+            this.areaBindingSource.DataMember = "Area";
+            this.areaBindingSource.DataSource = this.database1DataSet;
+            // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.catalogueBindingSource, "Розміри", true));
@@ -429,6 +446,11 @@
             this.comboBox1.Size = new System.Drawing.Size(152, 24);
             this.comboBox1.TabIndex = 37;
             this.comboBox1.ValueMember = "Id";
+            // 
+            // variousplantsBindingSource
+            // 
+            this.variousplantsBindingSource.DataMember = "Various_plants";
+            this.variousplantsBindingSource.DataSource = this.database1DataSet;
             // 
             // comboBox2
             // 
@@ -512,29 +534,127 @@
             this.label9.TabIndex = 38;
             this.label9.Text = "Різновид";
             // 
-            // variousplantsBindingSource
-            // 
-            this.variousplantsBindingSource.DataMember = "Various_plants";
-            this.variousplantsBindingSource.DataSource = this.database1DataSet;
-            // 
             // various_plantsTableAdapter
             // 
             this.various_plantsTableAdapter.ClearBeforeFill = true;
-            // 
-            // areaBindingSource
-            // 
-            this.areaBindingSource.DataMember = "Area";
-            this.areaBindingSource.DataSource = this.database1DataSet;
             // 
             // areaTableAdapter
             // 
             this.areaTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(1182, 30);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(102, 22);
+            this.textBox12.TabIndex = 143;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1290, 32);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 20);
+            this.checkBox1.TabIndex = 142;
+            this.checkBox1.Text = "filter by size";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.розміри});
+            this.dataGridView1.Location = new System.Drawing.Point(885, 117);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(478, 188);
+            this.dataGridView1.TabIndex = 141;
+            this.dataGridView1.Visible = false;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(1057, 30);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(102, 22);
+            this.textBox11.TabIndex = 140;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            // 
+            // select
+            // 
+            this.select.Location = new System.Drawing.Point(1027, 59);
+            this.select.Name = "select";
+            this.select.Size = new System.Drawing.Size(132, 23);
+            this.select.TabIndex = 139;
+            this.select.Text = "Select By size";
+            this.select.UseVisualStyleBackColor = true;
+            this.select.Click += new System.EventHandler(this.select_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(1182, 118);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(181, 208);
+            this.textBox10.TabIndex = 138;
+            this.textBox10.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(885, 30);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 137;
+            // 
+            // find
+            // 
+            this.find.Location = new System.Drawing.Point(885, 59);
+            this.find.Name = "find";
+            this.find.Size = new System.Drawing.Size(96, 23);
+            this.find.TabIndex = 136;
+            this.find.Text = "FindByID";
+            this.find.UseVisualStyleBackColor = true;
+            this.find.Click += new System.EventHandler(this.find_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Назва";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 125;
+            // 
+            // розміри
+            // 
+            this.розміри.HeaderText = "Розміри";
+            this.розміри.MinimumWidth = 6;
+            this.розміри.Name = "розміри";
+            this.розміри.Width = 125;
+            // 
             // Catalogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 592);
+            this.ClientSize = new System.Drawing.Size(1443, 592);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.select);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.find);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -569,8 +689,9 @@
             this.catalogueBindingNavigator.ResumeLayout(false);
             this.catalogueBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variousplantsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variousplantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,5 +749,16 @@
         private Database1DataSetTableAdapters.Various_plantsTableAdapter various_plantsTableAdapter;
         private System.Windows.Forms.BindingSource areaBindingSource;
         private Database1DataSetTableAdapters.AreaTableAdapter areaTableAdapter;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button select;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button find;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn розміри;
     }
 }

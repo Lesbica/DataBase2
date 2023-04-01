@@ -66,11 +66,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.select = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.find = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantBindingNavigator)).BeginInit();
             this.plantBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.plantDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -131,7 +142,7 @@
             this.plantBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.plantBindingNavigator.Name = "plantBindingNavigator";
             this.plantBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.plantBindingNavigator.Size = new System.Drawing.Size(992, 31);
+            this.plantBindingNavigator.Size = new System.Drawing.Size(1475, 27);
             this.plantBindingNavigator.TabIndex = 0;
             this.plantBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -141,7 +152,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
@@ -240,11 +251,11 @@
             this.dataGridViewTextBoxColumn3});
             this.plantDataGridView.DataSource = this.plantBindingSource;
             this.plantDataGridView.Dock = System.Windows.Forms.DockStyle.Left;
-            this.plantDataGridView.Location = new System.Drawing.Point(0, 31);
+            this.plantDataGridView.Location = new System.Drawing.Point(0, 27);
             this.plantDataGridView.Name = "plantDataGridView";
             this.plantDataGridView.RowHeadersWidth = 51;
             this.plantDataGridView.RowTemplate.Height = 24;
-            this.plantDataGridView.Size = new System.Drawing.Size(522, 419);
+            this.plantDataGridView.Size = new System.Drawing.Size(522, 423);
             this.plantDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -400,11 +411,110 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Вологість";
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(1217, 74);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(102, 22);
+            this.textBox12.TabIndex = 111;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1325, 76);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(108, 20);
+            this.checkBox1.TabIndex = 110;
+            this.checkBox1.Text = "filter by name";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dataGridView1.Location = new System.Drawing.Point(920, 161);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(478, 188);
+            this.dataGridView1.TabIndex = 109;
+            this.dataGridView1.Visible = false;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(1092, 74);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(102, 22);
+            this.textBox11.TabIndex = 108;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            // 
+            // select
+            // 
+            this.select.Location = new System.Drawing.Point(1062, 103);
+            this.select.Name = "select";
+            this.select.Size = new System.Drawing.Size(132, 23);
+            this.select.TabIndex = 107;
+            this.select.Text = "Select By Назва";
+            this.select.UseVisualStyleBackColor = true;
+            this.select.Click += new System.EventHandler(this.select_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(1217, 162);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(181, 208);
+            this.textBox10.TabIndex = 106;
+            this.textBox10.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(920, 74);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 105;
+            // 
+            // find
+            // 
+            this.find.Location = new System.Drawing.Point(920, 103);
+            this.find.Name = "find";
+            this.find.Size = new System.Drawing.Size(96, 23);
+            this.find.TabIndex = 104;
+            this.find.Text = "FindByID";
+            this.find.UseVisualStyleBackColor = true;
+            this.find.Click += new System.EventHandler(this.find_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Тип";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
             // Plant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 450);
+            this.ClientSize = new System.Drawing.Size(1475, 450);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.select);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.find);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
@@ -431,6 +541,7 @@
             this.plantBindingNavigator.ResumeLayout(false);
             this.plantBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.plantDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +585,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button select;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button find;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

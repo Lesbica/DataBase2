@@ -454,11 +454,11 @@ namespace DataBase
 
         private void select_Click(object sender, EventArgs e)
         {
-            DataRow[] searchRes = database1DataSet.Tables["Various_plants"].Select("Бі /Триномінальна назва.like '"+ textBox11.Text+"%'");
+            DataRow[] searchRes = database1DataSet.Tables["Various_plants"].Select("[Бі /Триномінальна назва] LIKE '" + textBox11.Text + "%'");
             dataGridView1.Visible = true;
             textBox10.Visible = false;
             dataGridView1.Rows.Clear();
-            if (searchRes != null)
+            if (searchRes == null)
             {
                 MessageBox.Show("no data!");
             }
@@ -466,9 +466,31 @@ namespace DataBase
             {
                 foreach (DataRow dr in searchRes)
                 {
-                    dataGridView1.Rows.Add(dr);
+                    dataGridView1.Rows.Add(dr.ItemArray);
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                various_plantsBindingSource.Filter = "[Бі /Триномінальна назва] >= '" + textBox11.Text + "' AND [Бі /Триномінальна назва] <= '" + textBox12.Text + "'";
+            }
+            else
+            {
+                various_plantsBindingSource.Filter = "";
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false; 
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
         }
     }
 }

@@ -177,5 +177,61 @@ namespace DataBase
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void find_Click(object sender, EventArgs e)
+        {
+            Database1DataSet.CatalogueRow searchRes = database1DataSet.Catalogue.FindById(Convert.ToInt32(textBox9.Text));
+            textBox10.Visible = true;
+            dataGridView1.Visible = false;
+            if (searchRes != null)
+            {
+                textBox10.Text = searchRes.Id.ToString() + ", " + searchRes.Розміри.ToString();
+            }
+            else
+            {
+                MessageBox.Show("no data!");
+            }
+        }
+
+        private void select_Click(object sender, EventArgs e)
+        {
+            DataRow[] searchRes = database1DataSet.Tables["Catalogue"].Select("Розміри LIKE '" + textBox11.Text + "%'");
+            dataGridView1.Visible = true;
+            textBox10.Visible = false;
+            dataGridView1.Rows.Clear();
+            if (searchRes == null)
+            {
+                MessageBox.Show("no data!");
+            }
+            else
+            {
+                foreach (DataRow dr in searchRes)
+                {
+                    dataGridView1.Rows.Add(dr.ItemArray);
+                }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                catalogueBindingSource.Filter = "Розміри >= '" + textBox11.Text + "' AND Розміри <= '" + textBox12.Text + "'";
+            }
+            else
+            {
+                catalogueBindingSource.Filter = "";
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+        }
     }
 }
