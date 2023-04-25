@@ -633,7 +633,8 @@ SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, �
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, Родина, [Ареал Виду], [Природоохоронний статус], [Бі /Триномінальна назва], Земля FROM dbo.Various_plants</CommandText>
+                    <CommandText>SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, Родина, [Ареал Виду], [Природоохоронний статус], [Бі /Триномінальна назва], Земля
+FROM     Various_plants</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -916,31 +917,31 @@ SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, �
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View" msprop:Generator_RowEvHandlerName="ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewRowDeleted" msprop:Generator_RowDeletingName="ViewRowDeleting" msprop:Generator_RowEvArgName="ViewRowChangeEvent" msprop:Generator_TablePropName="View" msprop:Generator_RowChangedName="ViewRowChanged" msprop:Generator_RowChangingName="ViewRowChanging" msprop:Generator_TableClassName="ViewDataTable" msprop:Generator_RowClassName="ViewRow" msprop:Generator_TableVarName="tableView" msprop:Generator_UserTableName="View">
+        <xs:element name="View" msprop:Generator_RowEvHandlerName="ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewRowDeleted" msprop:Generator_RowDeletingName="ViewRowDeleting" msprop:Generator_RowEvArgName="ViewRowChangeEvent" msprop:Generator_TablePropName="View" msprop:Generator_RowChangedName="ViewRowChanged" msprop:Generator_UserTableName="View" msprop:Generator_RowChangingName="ViewRowChanging" msprop:Generator_RowClassName="ViewRow" msprop:Generator_TableClassName="ViewDataTable" msprop:Generator_TableVarName="tableView">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Бі_x0020__x002F_Триномінальна_x0020_назва" msprop:Generator_ColumnPropNameInRow="_Бі__Триномінальна_назва" msprop:Generator_ColumnPropNameInTable="_Бі__Триномінальна_назваColumn" msprop:Generator_ColumnVarNameInTable="_columnБі__Триномінальна_назва" msprop:Generator_UserColumnName="Бі /Триномінальна назва" minOccurs="0">
+              <xs:element name="Бі_x0020__x002F_Триномінальна_x0020_назва" msprop:Generator_ColumnPropNameInTable="_Бі__Триномінальна_назваColumn" msprop:Generator_ColumnPropNameInRow="_Бі__Триномінальна_назва" msprop:Generator_UserColumnName="Бі /Триномінальна назва" msprop:Generator_ColumnVarNameInTable="_columnБі__Триномінальна_назва" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Розміри" msprop:Generator_ColumnPropNameInRow="Розміри" msprop:Generator_ColumnPropNameInTable="РозміриColumn" msprop:Generator_ColumnVarNameInTable="columnРозміри" msprop:Generator_UserColumnName="Розміри" minOccurs="0">
+              <xs:element name="Розміри" msprop:Generator_ColumnPropNameInTable="РозміриColumn" msprop:Generator_ColumnPropNameInRow="Розміри" msprop:Generator_UserColumnName="Розміри" msprop:Generator_ColumnVarNameInTable="columnРозміри" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Назва_x0020_ділянки" msprop:Generator_ColumnPropNameInRow="Назва_ділянки" msprop:Generator_ColumnPropNameInTable="Назва_ділянкиColumn" msprop:Generator_ColumnVarNameInTable="columnНазва_ділянки" msprop:Generator_UserColumnName="Назва ділянки" minOccurs="0">
+              <xs:element name="Назва_x0020_ділянки" msprop:Generator_ColumnPropNameInTable="Назва_ділянкиColumn" msprop:Generator_ColumnPropNameInRow="Назва_ділянки" msprop:Generator_UserColumnName="Назва ділянки" msprop:Generator_ColumnVarNameInTable="columnНазва_ділянки" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Посадка" msprop:Generator_ColumnPropNameInRow="Посадка" msprop:Generator_ColumnPropNameInTable="ПосадкаColumn" msprop:Generator_ColumnVarNameInTable="columnПосадка" msprop:Generator_UserColumnName="Посадка" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Посадка" msprop:Generator_ColumnPropNameInTable="ПосадкаColumn" msprop:Generator_ColumnPropNameInRow="Посадка" msprop:Generator_UserColumnName="Посадка" msprop:Generator_ColumnVarNameInTable="columnПосадка" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -10307,7 +10307,7 @@ SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, �
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Рід, Вид, Відділ, Клас, Порядок, Клада, Родина, [Ареал Виду], [Природо" +
-                "охоронний статус], [Бі /Триномінальна назва], Земля FROM dbo.Various_plants";
+                "охоронний статус], [Бі /Триномінальна назва], Земля\r\nFROM     Various_plants";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

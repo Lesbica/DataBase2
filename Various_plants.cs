@@ -39,12 +39,14 @@ namespace DataBase
             InitializeComponent();
         }
         public bool updated = false;
+
         private void various_plantsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.various_plantsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
             updated = true;
+            this.various_plantsTableAdapter.Fill(this.database1DataSet.Various_plants);
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -68,6 +70,16 @@ namespace DataBase
             //TODO: данная строка кода позволяет загрузить данные в таблицу "database1DataSet.Various_plants".При необходимости она может быть перемещена или удалена.
             this.various_plantsTableAdapter.Fill(this.database1DataSet.Various_plants);
 
+
+            /*GenuEditComboBox.Items.Clear();
+            for(int i = 0; i < database1DataSet.Genu.Rows.Count; i++)
+            {
+                GenuEditComboBox.Items.Add(database1DataSet.Genu.Rows[i][1]);
+            }
+
+            DataRow dr_gen = database1DataSet.Genu.Rows[0];
+            DataRow[] dr_kind = database1DataSet.Kind.Select("id=" + dr_gen[1].ToString());
+            GenuEditComboBox.SelectedIndex = GenuEditComboBox.FindString(dr_kind[0][1].ToString());*/
 
             FillGenuComboBox();
             FillKindComboBox();
@@ -214,7 +226,7 @@ namespace DataBase
 
         private void FillGenuComboBox()
         {
-            _genus.Clear();
+            GenuEditComboBox.Items.Clear();
             foreach (var genu in genuTableAdapter.GetData().Select())
             {
 
@@ -305,112 +317,138 @@ namespace DataBase
 
                 DataRow currentr = database1DataSet.Tables["Various_plants"].Rows[various_plantsBindingSource.Position];
 
-                var genuid = (int)currentr["Рід"];
-                foreach (var genu in _genus)
+                if (int.TryParse(currentr["Рід"].ToString(), out var genuid))
                 {
-                    if (genu.Id == genuid)
+                    foreach (var genu in _genus)
                     {
-                        GenuEditComboBox.SelectedItem = genu;
-                        break;
+                        if (genu.Id == genuid)
+                        {
+                            GenuEditComboBox.SelectedItem = genu;
+                            break;
+                        }
                     }
                 }
-
-                var kindid = (int)currentr["Вид"];
-                foreach (var kind in _kind)
+                else
                 {
-                    if (kind.Id == kindid)
-                    {
-                        KindComboBox.SelectedItem = kind;
-                        break;
-                    }
+                    GenuEditComboBox.SelectedItem = null;
                 }
 
-                var departmentid = (int)currentr["Відділ"];
-                foreach (var department in _department)
+                if (int.TryParse(currentr["Вид"].ToString(), out var kindid))
                 {
-                    if (department.Id == departmentid)
+                    foreach (var kind in _kind)
                     {
-                        DepartmentComboBox.SelectedItem = department;
-                        break;
+                        if (kind.Id == kindid)
+                        {
+                            KindComboBox.SelectedItem = kind;
+                            break;
+                        }
                     }
                 }
-
-                var сategorytid = (int)currentr["Відділ"];
-                foreach (var сategory in _category)
+                else
                 {
-                    if (сategory.Id == сategorytid)
-                    {
-                        CategoryComboBox.SelectedItem = сategory;
-                        break;
-                    }
+                    KindComboBox.SelectedItem = null;
                 }
 
-                var rankid = (int)currentr["Відділ"];
-                foreach (var rank in _rank)
+                if (int.TryParse(currentr["Відділ"].ToString(), out var departmentid))
                 {
-                    if (rank.Id == rankid)
+                    foreach (var department in _department)
                     {
-                        RankComboBox.SelectedItem = rank;
-                        break;
+                        if (department.Id == departmentid)
+                        {
+                            DepartmentComboBox.SelectedItem = department;
+                            break;
+                        }
                     }
                 }
-
-                var putid = (int)currentr["Відділ"];
-                foreach (var put in _put)
+                else
                 {
-                    if (put.Id == putid)
-                    {
-                        PutComboBox.SelectedItem = put;
-                        break;
-                    }
+                    DepartmentComboBox.SelectedItem = null;
                 }
 
-                var familyid = (int)currentr["Відділ"];
-                foreach (var family in _family)
+                if (int.TryParse(currentr["Клас"].ToString(), out var сategorytid))
                 {
-                    if (family.Id == familyid)
+                    foreach (var сategory in _category)
                     {
-                        FamilyComboBox.SelectedItem = family;
-                        break;
+                        if (сategory.Id == сategorytid)
+                        {
+                            CategoryComboBox.SelectedItem = сategory;
+                            break;
+                        }
                     }
                 }
-
-                var plantid = (int)currentr["Відділ"];
-                foreach (var plant in _plant)
+                else
                 {
-                    if (plant.Id == plantid)
-                    {
-                        PlantComboBox.SelectedItem = plant;
-                        break;
-                    }
+                    CategoryComboBox.SelectedItem = null;
                 }
 
-                //var __genu = (GenuDto)currentr["Рід"];
-                //var __kind = (KindDto)currentr["Вид"];
-                //var department = (DepartmentDto)this.DepartmentComboBox.SelectedItem;
-                //var category = (CategoryDto)this.CategoryComboBox.SelectedItem;
-                //var rank = (RankDto)this.RankComboBox.SelectedItem;
-                //var put = (PutDto)this.PutComboBox.SelectedItem;
-                //var family = (FamilyDto)this.FamilyComboBox.SelectedItem;
-                //var plant = (PlantDto)this.PlantComboBox.SelectedItem;
+                if (int.TryParse(currentr["Порядок"].ToString(), out var rankid))
+                {
+                    foreach (var rank in _rank)
+                    {
+                        if (rank.Id == rankid)
+                        {
+                            RankComboBox.SelectedItem = rank;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    RankComboBox.SelectedItem = null;
+                }
+
+                if (int.TryParse(currentr["Клада"].ToString(), out var putid))
+                {
+                    foreach (var put in _put)
+                    {
+                        if (put.Id == putid)
+                        {
+                            PutComboBox.SelectedItem = put;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    PutComboBox.SelectedItem = null;
+                }
+
+                if (int.TryParse(currentr["Родина"].ToString(), out var familyid))
+                {
+                    foreach (var family in _family)
+                    {
+                        if (family.Id == familyid)
+                        {
+                            FamilyComboBox.SelectedItem = family;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    FamilyComboBox.SelectedItem = null;
+                }
+
+                if (int.TryParse(currentr["Земля"].ToString(), out var plantid))
+                {
+                    foreach (var plant in _plant)
+                    {
+                        if (plant.Id == plantid)
+                        {
+                            PlantComboBox.SelectedItem = plant;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    PlantComboBox.SelectedItem = null;
+                }
 
                 textBox8.Text = currentr["Id"].ToString();
                 textBox7.Text = currentr["Ареал виду"].ToString();
                 textBox6.Text = currentr["Природоохоронний статус"].ToString();
                 textBox5.Text = currentr["Бі /Триномінальна назва"].ToString();
-                //GenuEditComboBox.SelectedItem = __genu.Name;
-
-                //currentr["Рід"] = __genu.Id;
-                //currentr["Вид"] = __kind.Id;
-                //currentr["Відділ"] = department.Id; ;
-                //currentr["Клас"] = category.Id;
-                //currentr["Порядок"] = rank.Id;
-                //currentr["Клада"] = put.Id;
-                //currentr["Родина"] = family.Id;
-                //currentr["Ареал виду"] = textBox7.Text;
-                //currentr["Природоохоронний статус"] = textBox6.Text;
-                //currentr["Бі/Триномінальна назва"] = textBox5.Text;
-                //currentr["Земля"] = plant.Id;
             }
             catch (Exception ex)
             {
@@ -491,6 +529,30 @@ namespace DataBase
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            DataRow dr_vp = database1DataSet.Various_plants.Rows[various_plantsBindingSource.Position];
+            form2.dataGridView1.DataSource = database1DataSet.Genu;
+            int r;
+
+            for(r=0; r< form2.dataGridView1.Rows.Count; r++)
+            {
+                if (form2.dataGridView1.Rows[r].Cells[0].Value.ToString()== dr_vp["Рід"].ToString())
+                {
+                    break;
+                }
+            }
+
+            form2.dataGridView1.CurrentCell = form2.dataGridView1[0,r];
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                int code_genu = Convert.ToInt32(form2.dataGridView1.CurrentRow.Cells[0].Value);
+                textBox13.Text = form2.dataGridView1.CurrentRow.Cells[0].Value.ToString()+"(Name = "+ form2.dataGridView1.CurrentRow.Cells[1].Value.ToString()+")";
+                dr_vp["Рід"] = code_genu;
+            }
         }
     }
 }
