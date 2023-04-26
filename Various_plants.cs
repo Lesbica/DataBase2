@@ -25,8 +25,8 @@ namespace DataBase
         private readonly List<PutDto> _put;
         private readonly List<FamilyDto> _family;
         private readonly List<PlantDto> _plant;
-
-        public Various_plants()
+        Role role;
+        public Various_plants(Role role)
         {
             _genus= new List<GenuDto>();
             _kind= new List<KindDto>();
@@ -36,6 +36,7 @@ namespace DataBase
             _put = new List<PutDto>();
             _family = new List<FamilyDto>();
             _plant = new List<PlantDto>();
+            this.role = role;
             InitializeComponent();
         }
         public bool updated = false;
@@ -80,7 +81,44 @@ namespace DataBase
             DataRow dr_gen = database1DataSet.Genu.Rows[0];
             DataRow[] dr_kind = database1DataSet.Kind.Select("id=" + dr_gen[1].ToString());
             GenuEditComboBox.SelectedIndex = GenuEditComboBox.FindString(dr_kind[0][1].ToString());*/
+            if (role.user == "user")
+            {
+                this.various_plantsDataGridView.Enabled = false;
+                this.edit.Enabled = false;
+                this.bindingNavigatorAddNewItem.Enabled = false;
+                this.bindingNavigatorDeleteItem.Enabled = false;
+                this.various_plantsBindingNavigatorSaveItem.Enabled = false;
+                this.button3.Enabled = false;
+                this.delete.Enabled = false;
 
+                this.textBox1.Enabled = false;
+                this.textBox3.Enabled = false;
+                this.textBox4.Enabled = false;
+                this.textBox8.Enabled = false;
+                this.textBox7.Enabled = false;
+                this.textBox6.Enabled = false;
+                this.textBox6.Enabled = false;
+                this.textBox5.Enabled = false;
+            }
+            else if (role.admin == "admin")
+            {
+                this.various_plantsDataGridView.Enabled = true;
+                this.edit.Enabled = true;
+                this.bindingNavigatorAddNewItem.Enabled = true;
+                this.bindingNavigatorDeleteItem.Enabled = true;
+                this.various_plantsBindingNavigatorSaveItem.Enabled = true;
+                this.button3.Enabled = true;
+                this.delete.Enabled = true;
+                this.textBox1.Enabled = true;
+                this.textBox3.Enabled = true;
+                this.textBox4.Enabled = true;
+                this.textBox8.Enabled = true;
+                this.textBox7.Enabled = true;
+                this.textBox6.Enabled = true;
+                this.textBox6.Enabled = true;
+                this.textBox5.Enabled = true;
+            }
+            
             FillGenuComboBox();
             FillKindComboBox();
             FillDepartmentComboBox();

@@ -48,6 +48,18 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.various_plantsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.various_plantsDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.рідDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.видDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.відділDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.класDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.порядокDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кладаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.родинаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ареалВидуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.природоохороннийСтатусDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.земляDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,27 +150,6 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.рідDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.видDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.відділDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.класDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.порядокDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кладаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.родинаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ареалВидуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.природоохороннийСтатусDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.земляDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genuNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kindNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.putNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.назваДілянкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rankNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plantNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.various_plantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.various_plantsBindingNavigator)).BeginInit();
@@ -351,16 +342,7 @@
             this.ареалВидуDataGridViewTextBoxColumn,
             this.природоохороннийСтатусDataGridViewTextBoxColumn,
             this.біТриномінальнаНазваDataGridViewTextBoxColumn,
-            this.земляDataGridViewTextBoxColumn,
-            this.genuNameDataGridViewTextBoxColumn,
-            this.kindNameDataGridViewTextBoxColumn,
-            this.putNameDataGridViewTextBoxColumn,
-            this.familyNameDataGridViewTextBoxColumn,
-            this.categoryNameDataGridViewTextBoxColumn,
-            this.назваДілянкиDataGridViewTextBoxColumn,
-            this.departmentNameDataGridViewTextBoxColumn,
-            this.rankNameDataGridViewTextBoxColumn,
-            this.plantNameDataGridViewTextBoxColumn});
+            this.земляDataGridViewTextBoxColumn});
             this.various_plantsDataGridView.DataSource = this.various_plantsBindingSource;
             this.various_plantsDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.various_plantsDataGridView.Location = new System.Drawing.Point(0, 383);
@@ -370,6 +352,102 @@
             this.various_plantsDataGridView.Size = new System.Drawing.Size(1924, 288);
             this.various_plantsDataGridView.TabIndex = 1;
             this.various_plantsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.various_plantsDataGridView_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // рідDataGridViewTextBoxColumn
+            // 
+            this.рідDataGridViewTextBoxColumn.DataPropertyName = "Рід";
+            this.рідDataGridViewTextBoxColumn.HeaderText = "Рід";
+            this.рідDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.рідDataGridViewTextBoxColumn.Name = "рідDataGridViewTextBoxColumn";
+            this.рідDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // видDataGridViewTextBoxColumn
+            // 
+            this.видDataGridViewTextBoxColumn.DataPropertyName = "Вид";
+            this.видDataGridViewTextBoxColumn.HeaderText = "Вид";
+            this.видDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.видDataGridViewTextBoxColumn.Name = "видDataGridViewTextBoxColumn";
+            this.видDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // відділDataGridViewTextBoxColumn
+            // 
+            this.відділDataGridViewTextBoxColumn.DataPropertyName = "Відділ";
+            this.відділDataGridViewTextBoxColumn.HeaderText = "Відділ";
+            this.відділDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.відділDataGridViewTextBoxColumn.Name = "відділDataGridViewTextBoxColumn";
+            this.відділDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // класDataGridViewTextBoxColumn
+            // 
+            this.класDataGridViewTextBoxColumn.DataPropertyName = "Клас";
+            this.класDataGridViewTextBoxColumn.HeaderText = "Клас";
+            this.класDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.класDataGridViewTextBoxColumn.Name = "класDataGridViewTextBoxColumn";
+            this.класDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // порядокDataGridViewTextBoxColumn
+            // 
+            this.порядокDataGridViewTextBoxColumn.DataPropertyName = "Порядок";
+            this.порядокDataGridViewTextBoxColumn.HeaderText = "Порядок";
+            this.порядокDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.порядокDataGridViewTextBoxColumn.Name = "порядокDataGridViewTextBoxColumn";
+            this.порядокDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // кладаDataGridViewTextBoxColumn
+            // 
+            this.кладаDataGridViewTextBoxColumn.DataPropertyName = "Клада";
+            this.кладаDataGridViewTextBoxColumn.HeaderText = "Клада";
+            this.кладаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.кладаDataGridViewTextBoxColumn.Name = "кладаDataGridViewTextBoxColumn";
+            this.кладаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // родинаDataGridViewTextBoxColumn
+            // 
+            this.родинаDataGridViewTextBoxColumn.DataPropertyName = "Родина";
+            this.родинаDataGridViewTextBoxColumn.HeaderText = "Родина";
+            this.родинаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.родинаDataGridViewTextBoxColumn.Name = "родинаDataGridViewTextBoxColumn";
+            this.родинаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ареалВидуDataGridViewTextBoxColumn
+            // 
+            this.ареалВидуDataGridViewTextBoxColumn.DataPropertyName = "Ареал Виду";
+            this.ареалВидуDataGridViewTextBoxColumn.HeaderText = "Ареал Виду";
+            this.ареалВидуDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ареалВидуDataGridViewTextBoxColumn.Name = "ареалВидуDataGridViewTextBoxColumn";
+            this.ареалВидуDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // природоохороннийСтатусDataGridViewTextBoxColumn
+            // 
+            this.природоохороннийСтатусDataGridViewTextBoxColumn.DataPropertyName = "Природоохоронний статус";
+            this.природоохороннийСтатусDataGridViewTextBoxColumn.HeaderText = "Природоохоронний статус";
+            this.природоохороннийСтатусDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.природоохороннийСтатусDataGridViewTextBoxColumn.Name = "природоохороннийСтатусDataGridViewTextBoxColumn";
+            this.природоохороннийСтатусDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // біТриномінальнаНазваDataGridViewTextBoxColumn
+            // 
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn.DataPropertyName = "Бі /Триномінальна назва";
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn.HeaderText = "Бі /Триномінальна назва";
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn.Name = "біТриномінальнаНазваDataGridViewTextBoxColumn";
+            this.біТриномінальнаНазваDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // земляDataGridViewTextBoxColumn
+            // 
+            this.земляDataGridViewTextBoxColumn.DataPropertyName = "Земля";
+            this.земляDataGridViewTextBoxColumn.HeaderText = "Земля";
+            this.земляDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.земляDataGridViewTextBoxColumn.Name = "земляDataGridViewTextBoxColumn";
+            this.земляDataGridViewTextBoxColumn.Width = 125;
             // 
             // textBox1
             // 
@@ -1113,174 +1191,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // рідDataGridViewTextBoxColumn
-            // 
-            this.рідDataGridViewTextBoxColumn.DataPropertyName = "Рід";
-            this.рідDataGridViewTextBoxColumn.HeaderText = "Рід";
-            this.рідDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.рідDataGridViewTextBoxColumn.Name = "рідDataGridViewTextBoxColumn";
-            this.рідDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // видDataGridViewTextBoxColumn
-            // 
-            this.видDataGridViewTextBoxColumn.DataPropertyName = "Вид";
-            this.видDataGridViewTextBoxColumn.HeaderText = "Вид";
-            this.видDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.видDataGridViewTextBoxColumn.Name = "видDataGridViewTextBoxColumn";
-            this.видDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // відділDataGridViewTextBoxColumn
-            // 
-            this.відділDataGridViewTextBoxColumn.DataPropertyName = "Відділ";
-            this.відділDataGridViewTextBoxColumn.HeaderText = "Відділ";
-            this.відділDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.відділDataGridViewTextBoxColumn.Name = "відділDataGridViewTextBoxColumn";
-            this.відділDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // класDataGridViewTextBoxColumn
-            // 
-            this.класDataGridViewTextBoxColumn.DataPropertyName = "Клас";
-            this.класDataGridViewTextBoxColumn.HeaderText = "Клас";
-            this.класDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.класDataGridViewTextBoxColumn.Name = "класDataGridViewTextBoxColumn";
-            this.класDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // порядокDataGridViewTextBoxColumn
-            // 
-            this.порядокDataGridViewTextBoxColumn.DataPropertyName = "Порядок";
-            this.порядокDataGridViewTextBoxColumn.HeaderText = "Порядок";
-            this.порядокDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.порядокDataGridViewTextBoxColumn.Name = "порядокDataGridViewTextBoxColumn";
-            this.порядокDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // кладаDataGridViewTextBoxColumn
-            // 
-            this.кладаDataGridViewTextBoxColumn.DataPropertyName = "Клада";
-            this.кладаDataGridViewTextBoxColumn.HeaderText = "Клада";
-            this.кладаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.кладаDataGridViewTextBoxColumn.Name = "кладаDataGridViewTextBoxColumn";
-            this.кладаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // родинаDataGridViewTextBoxColumn
-            // 
-            this.родинаDataGridViewTextBoxColumn.DataPropertyName = "Родина";
-            this.родинаDataGridViewTextBoxColumn.HeaderText = "Родина";
-            this.родинаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.родинаDataGridViewTextBoxColumn.Name = "родинаDataGridViewTextBoxColumn";
-            this.родинаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ареалВидуDataGridViewTextBoxColumn
-            // 
-            this.ареалВидуDataGridViewTextBoxColumn.DataPropertyName = "Ареал Виду";
-            this.ареалВидуDataGridViewTextBoxColumn.HeaderText = "Ареал Виду";
-            this.ареалВидуDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ареалВидуDataGridViewTextBoxColumn.Name = "ареалВидуDataGridViewTextBoxColumn";
-            this.ареалВидуDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // природоохороннийСтатусDataGridViewTextBoxColumn
-            // 
-            this.природоохороннийСтатусDataGridViewTextBoxColumn.DataPropertyName = "Природоохоронний статус";
-            this.природоохороннийСтатусDataGridViewTextBoxColumn.HeaderText = "Природоохоронний статус";
-            this.природоохороннийСтатусDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.природоохороннийСтатусDataGridViewTextBoxColumn.Name = "природоохороннийСтатусDataGridViewTextBoxColumn";
-            this.природоохороннийСтатусDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // біТриномінальнаНазваDataGridViewTextBoxColumn
-            // 
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn.DataPropertyName = "Бі /Триномінальна назва";
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn.HeaderText = "Бі /Триномінальна назва";
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn.Name = "біТриномінальнаНазваDataGridViewTextBoxColumn";
-            this.біТриномінальнаНазваDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // земляDataGridViewTextBoxColumn
-            // 
-            this.земляDataGridViewTextBoxColumn.DataPropertyName = "Земля";
-            this.земляDataGridViewTextBoxColumn.HeaderText = "Земля";
-            this.земляDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.земляDataGridViewTextBoxColumn.Name = "земляDataGridViewTextBoxColumn";
-            this.земляDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genuNameDataGridViewTextBoxColumn
-            // 
-            this.genuNameDataGridViewTextBoxColumn.DataPropertyName = "Genu_Name";
-            this.genuNameDataGridViewTextBoxColumn.HeaderText = "Genu_Name";
-            this.genuNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genuNameDataGridViewTextBoxColumn.Name = "genuNameDataGridViewTextBoxColumn";
-            this.genuNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kindNameDataGridViewTextBoxColumn
-            // 
-            this.kindNameDataGridViewTextBoxColumn.DataPropertyName = "Kind_Name";
-            this.kindNameDataGridViewTextBoxColumn.HeaderText = "Kind_Name";
-            this.kindNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kindNameDataGridViewTextBoxColumn.Name = "kindNameDataGridViewTextBoxColumn";
-            this.kindNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // putNameDataGridViewTextBoxColumn
-            // 
-            this.putNameDataGridViewTextBoxColumn.DataPropertyName = "Put_Name";
-            this.putNameDataGridViewTextBoxColumn.HeaderText = "Put_Name";
-            this.putNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.putNameDataGridViewTextBoxColumn.Name = "putNameDataGridViewTextBoxColumn";
-            this.putNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // familyNameDataGridViewTextBoxColumn
-            // 
-            this.familyNameDataGridViewTextBoxColumn.DataPropertyName = "Family_Name";
-            this.familyNameDataGridViewTextBoxColumn.HeaderText = "Family_Name";
-            this.familyNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.familyNameDataGridViewTextBoxColumn.Name = "familyNameDataGridViewTextBoxColumn";
-            this.familyNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryNameDataGridViewTextBoxColumn
-            // 
-            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "Category_Name";
-            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "Category_Name";
-            this.categoryNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
-            this.categoryNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // назваДілянкиDataGridViewTextBoxColumn
-            // 
-            this.назваДілянкиDataGridViewTextBoxColumn.DataPropertyName = "Назва ділянки";
-            this.назваДілянкиDataGridViewTextBoxColumn.HeaderText = "Назва ділянки";
-            this.назваДілянкиDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.назваДілянкиDataGridViewTextBoxColumn.Name = "назваДілянкиDataGridViewTextBoxColumn";
-            this.назваДілянкиDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // departmentNameDataGridViewTextBoxColumn
-            // 
-            this.departmentNameDataGridViewTextBoxColumn.DataPropertyName = "Department_Name";
-            this.departmentNameDataGridViewTextBoxColumn.HeaderText = "Department_Name";
-            this.departmentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.departmentNameDataGridViewTextBoxColumn.Name = "departmentNameDataGridViewTextBoxColumn";
-            this.departmentNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // rankNameDataGridViewTextBoxColumn
-            // 
-            this.rankNameDataGridViewTextBoxColumn.DataPropertyName = "Rank_Name";
-            this.rankNameDataGridViewTextBoxColumn.HeaderText = "Rank_Name";
-            this.rankNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rankNameDataGridViewTextBoxColumn.Name = "rankNameDataGridViewTextBoxColumn";
-            this.rankNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // plantNameDataGridViewTextBoxColumn
-            // 
-            this.plantNameDataGridViewTextBoxColumn.DataPropertyName = "Plant_Name";
-            this.plantNameDataGridViewTextBoxColumn.HeaderText = "Plant_Name";
-            this.plantNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.plantNameDataGridViewTextBoxColumn.Name = "plantNameDataGridViewTextBoxColumn";
-            this.plantNameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Various_plants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1382,9 +1292,7 @@
         private Database1DataSetTableAdapters.Various_plantsTableAdapter various_plantsTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator various_plantsBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -1393,40 +1301,22 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton various_plantsBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView various_plantsDataGridView;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Button edit;
-        private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1435,9 +1325,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.BindingSource genuBindingSource;
         private Database1DataSetTableAdapters.GenuTableAdapter genuTableAdapter;
         private System.Windows.Forms.BindingSource departmentBindingSource;
@@ -1455,14 +1342,6 @@
         private Database1DataSetTableAdapters.FamilyTableAdapter familyTableAdapter;
         private System.Windows.Forms.BindingSource plantBindingSource;
         private Database1DataSetTableAdapters.PlantTableAdapter plantTableAdapter;
-        private System.Windows.Forms.ComboBox GenuEditComboBox;
-        private System.Windows.Forms.ComboBox KindComboBox;
-        private System.Windows.Forms.ComboBox DepartmentComboBox;
-        private System.Windows.Forms.ComboBox CategoryComboBox;
-        private System.Windows.Forms.ComboBox RankComboBox;
-        private System.Windows.Forms.ComboBox PutComboBox;
-        private System.Windows.Forms.ComboBox FamilyComboBox;
-        private System.Windows.Forms.ComboBox PlantComboBox;
         private System.Windows.Forms.Button find;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
@@ -1506,5 +1385,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rankNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn plantNameDataGridViewTextBoxColumn;
+        public System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        public System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        public System.Windows.Forms.ToolStripButton various_plantsBindingNavigatorSaveItem;
+        public System.Windows.Forms.DataGridView various_plantsDataGridView;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox comboBox4;
+        public System.Windows.Forms.ComboBox comboBox5;
+        public System.Windows.Forms.ComboBox comboBox6;
+        public System.Windows.Forms.ComboBox comboBox7;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.ComboBox comboBox8;
+        public System.Windows.Forms.Button edit;
+        public System.Windows.Forms.Button delete;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox9;
+        public System.Windows.Forms.ComboBox GenuEditComboBox;
+        public System.Windows.Forms.ComboBox KindComboBox;
+        public System.Windows.Forms.ComboBox DepartmentComboBox;
+        public System.Windows.Forms.ComboBox CategoryComboBox;
+        public System.Windows.Forms.ComboBox RankComboBox;
+        public System.Windows.Forms.ComboBox PutComboBox;
+        public System.Windows.Forms.ComboBox FamilyComboBox;
+        public System.Windows.Forms.ComboBox PlantComboBox;
     }
 }

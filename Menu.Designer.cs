@@ -406,6 +406,8 @@
             this.Controls.Add(this.Various_plants);
             this.Name = "Menu";
             this.Text = " Menu";
+            this.Deactivate += new System.EventHandler(this.Menu_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBindingSource)).EndInit();
@@ -431,9 +433,7 @@
         private Database1DataSetTableAdapters.ViewTableAdapter viewTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator viewBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -442,8 +442,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton viewBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView viewDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -457,6 +455,10 @@
         private System.Windows.Forms.Button put;
         private System.Windows.Forms.Button family;
         private System.Windows.Forms.Button rank;
+        public System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        public System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        public System.Windows.Forms.ToolStripButton viewBindingNavigatorSaveItem;
+        public System.Windows.Forms.DataGridView viewDataGridView;
     }
 }
 

@@ -16,7 +16,7 @@ namespace DataBase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());//Form1());// 
+            Application.Run(new Login());//Form1());// 
         }
     }
 }
